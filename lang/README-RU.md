@@ -1,20 +1,18 @@
 # xml-converter
 
-A module for converting between XML format and JavaScript objects.
+Пакет для перевода XML строки в объект JavaScript и обратно.
 
-[Documentation in Russian](lang/README-RU.md)
+## Требования
 
-## Requirements
+- Версия Node.js от 16 и выше.
 
-- Node.js version ^16.
-
-## Installation
+## Установка
 
 `npm i xml-converter`
 
-## Examples of using
+## Примеры использования
 
-### Parsing XML to JavaScript object.
+### Перевод XML в JavaScript объект.
 ```
 const { parseXML } = require( 'xml-converter' );
 
@@ -28,7 +26,7 @@ const xml = `<root>
 const object = parseXML( xml );
 ```
 <details>
-  <summary>Result</summary>
+  <summary>Результат</summary>
   
   ```
   //object
@@ -63,7 +61,7 @@ const object = parseXML( xml );
   ```
 </details>
 
-### Parsing JavaScript object to XML.
+### Перевод JavaScript объекта обратно в XML.
 ```
 const { parseObject } = require( 'xml-converter' );
 
@@ -100,7 +98,7 @@ const xml = parseObject( object, 2 );
 ```
 
 <details>
-  <summary>Result</summary>
+  <summary>Результат</summary>
   
   ```
   //xml
@@ -113,44 +111,44 @@ const xml = parseObject( object, 2 );
   ```
 </details>
 
-## Arguments
+## Аргументы функций.
 
 ### parseXML( xml )
 
-| Argument | Type | Description |
+| Аргумент | Тип | Описание |
 | --- | --- | --- |
-| xml | string | Valid xml string. |
+| xml | string | Валидная строка XML. |
 
 ### parseObject( object, indentSize )
 
-| Argument | Type | Description |
+| Аргумент | Тип | Описание |
 | --- | --- | --- |
-| object | object | Valid object described in the next section. |
-| indentSize | number | Indent size for xml string. |
+| object | object | Объект в формате, описанном в секции ниже. |
+| indentSize | number | Величина отступов в пробелах в xml строке. |
 
-## Fields and type of the object returned from the parseXML().
+## Тип и поля объекта возвращаемого функцией parseXML().
 
-| Field | Type | Description |
+| Поле | Тип | Описание |
 | --- | --- | --- |
-| value | string | Value of the XML tag. |
-| attrs | object | Object with tag's attributes { attributeName: 'attributeValue' }. |
-| self | boolean | Flag indicating whether the tag is self-closing. |
-| \[tag\] | array | Array with child-tags with same tag name. |
+| value | string | Значение XML тега. |
+| attrs | object |Объект с атрибутами тега { attributeName: 'attributeValue' }. |
+| self | boolean | Флаг обозначающий, что тег - самозакрывающийся. |
+| \[tag\] | array | Массив дочерних тегов с одинаковыми именами. |
 
 <details>
-  <summary>Example</summary>
+  <summary>Пример</summary>
   
   ```
   //object
   {
-    root: [ // root tag name
-      { // object, root tag
-        value: '', // root tag value
-        attrs: {}, // root tag attributes
+    root: [ // имя тега root
+      { //объект, содержащий тег root
+        value: '', // значение тега root
+        attrs: {}, // атрибуты тега root
         self: false,
-        child: [ // child tag name
-          { // object, child tag
-            value: '', // child tag value...
+        child: [ // имя тега, вложенного в тег root
+          { //объект, содержащий дочерний тег
+            value: '', // значение дочернего тега...
             attrs: {},
             self: false,
             tag: [
@@ -172,4 +170,5 @@ const xml = parseObject( object, 2 );
   }
   ```
 </details>
+
 

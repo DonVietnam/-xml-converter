@@ -1,0 +1,46 @@
+{
+  "name": "xml-converter",
+  "author": "DonVietnam",
+  "version": "1.0.0",
+  "description": "A module for converting between XML format and JavaScript objects.",
+  "license": "MIT",
+  "keywords": [
+    "vietnam",
+    "nodejs",
+    "xml",
+    "object",
+    "javascript",
+    "converter",
+    "parser",
+    "xml-object",
+    "object-xml",
+    "xml-json",
+    "json-xml",
+    "fast"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/DonVietnam/xml-converter"
+  },
+  "bugs": {
+    "url": "https://github.com/DonVietnam/xml-converter/issues"
+  },
+  "homepage": "https://github.com/DonVietnam/xml-converter",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "scripts": {
+    "start": "node index.js",
+    "lint": "eslint --ignore-path .eslintignore .",
+    "fix": "eslint --fix --ignore-path .eslintignore .",
+    "test": "npm run lint && jest test"
+  },
+  "engines": {
+    "node": "^16"
+  },
+  "devDependencies": {
+    "@types/node": "^16.11.7",
+    "eslint": "^7.8.1",
+    "jest": "^27.3.1",
+    "typescript": "^4.4.4"
+  }
+}
