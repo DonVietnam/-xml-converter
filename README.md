@@ -6,7 +6,7 @@ A module for converting between XML format and JavaScript objects.
 
 ## Requirements
 
-- Node.js version ^16.
+- Node.js version >=16.
 
 ## Installation
 
