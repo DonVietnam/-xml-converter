@@ -1,6 +1,9 @@
 {
   "name": "xml-converter",
-  "author": "DonVietnam",
+  "author": {
+    "name": "DonVietnam",
+    "email" : "don.vietnam.js@gmail.com"
+  },
   "version": "1.0.0",
   "description": "A module for converting between XML format and JavaScript objects.",
   "license": "MIT",
@@ -23,9 +26,14 @@
     "url": "https://github.com/DonVietnam/xml-converter"
   },
   "bugs": {
-    "url": "https://github.com/DonVietnam/xml-converter/issues"
+    "url": "https://github.com/DonVietnam/xml-converter/issues",
+    "email" : "don.vietnam.js@gmail.com"
   },
   "homepage": "https://github.com/DonVietnam/xml-converter",
+  "files": [
+    "lib/",
+    "index.d.ts"
+  ],
   "main": "index.js",
   "types": "index.d.ts",
   "scripts": {
@@ -35,7 +43,7 @@
     "test": "npm run lint && jest test"
   },
   "engines": {
-    "node": "^16"
+    "node": ">=16"
   },
   "devDependencies": {
     "@types/node": "^16.11.7",
